@@ -1,9 +1,9 @@
 # Reading Notes
 
-What is an interpreter?
-* ***Gives meaning to random characters** (letters, numbers, special characters)
+## What is an interpreter?
+* **Gives meaning to random characters** (letters, numbers, special characters)
     * Makes sense out of nonsense
-* Acts as the translation layer between humans and computers - computers can only understand 1s and 0s; yet with an interpreter, the characters we type are understood and actioned up by the computer to execute the logic we want
+* Acts as the translation layer between humans and computers - computers can only understand `1`s and `0`s; yet with an interpreter, the characters we type are understood and actioned up by the computer to execute the logic we want
 
 Types of Interpreters
 * (low end) Really small, don't include a *parsing* step
@@ -24,11 +24,25 @@ Interpreter vs Compiler
     3. ^ which an underlying/lower-level system understands
 
 Components/entities of an interpreter:
-    1. lexer\
-    2. parser\
-    3. abstract syntax tree\
-    4. internal object system\
-    5. evaluator
+* lexer
+* parser
+* abstract syntax tree
+* internal object system
+* evaluator
+
+## Chapter 1: Lexing
+```mermaid
+flowchart LR
+    a[Source Code] --> b[Tokens]
+    b[Tokens] --> c[Parser]
+    c[Parser] -- Feeds Tokens -->  d[AST]
+```
+
+* Lexing - or lexical analysis - is the transformation of our **source code to tokens**
+* ^ implemented by a **lexer**, aka:
+    * **tokenizer**
+    * **scanner**
+* 
 
 # Questions
 1. What are the heuristics for when a programming language implements both an intepreter and a compiler or just one of them?
