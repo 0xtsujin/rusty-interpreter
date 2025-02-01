@@ -1,0 +1,29 @@
+# Reading Notes
+
+What is an interpreter?
+* ***Gives meaning to random characters** (letters, numbers, special characters)
+* Makes sense out of nonsense
+* Acts as the translation layer between humans and computers - computers can only understand 1s and 0s; yet with an interpreter, the characters we type are understood and actioned up by the computer to execute the logic we want
+* There are many *varieties* of interpreters, but a fundamental attribute of all interpreters is that they:
+    1. take source code
+	2. evaluate the source code without producing a visible, intermediary result 
+	3. ^ which can later be executed
+
+Types of Interpreters
+* (low end) Really small, don't include a *parsing* step
+    * ie `brainfuck` https://minond.xyz/brainfuck/
+* *Parse source code, build an AST, then evaluate the AST (aka "tree-walking" interpreter)
+	* Note: This is the style we're building in the book
+* *(high end) Optimized using advanced parsing and evaluation techniques
+    * TODO: If an AST is not used, what're the alternatives? Why are they preferred? In what use-cases are they warranted?
+
+Interpreter vs Compiler
+* A compiler:
+    1. takes source code
+    2. produces output in another language
+    3. ^ which an underlying/lower-level system understands
+
+# Quotes
+> I kept asking myself: how does this work? And the first time this question began forming in my mind, I already knew that I’ll only be satisfied with an answer if I get to it by writing my own interpreter. So I set out to do so.
+
+> What I wanted was something between the 900 page book on compilers and the blog post that explains how to write a Lisp interpreter in 50 lines of Ruby code.
